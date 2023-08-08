@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dekoor</title>
+    <!-- Font family inter -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Poppins:wght@100;300;400;500;600&display=swap");
+    </style>
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <img src="img/logoSkwn.png" alt="" />
+      <div class="navbar-nav">
+        <a href="#home">About us</a>
+        <a href="#about">Furniture</a>
+        <a href="#menu">Partnerships</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="icon-shop">
+        <button><a href="#SignUp">Sign Up</a></button>
+        <a href="#ShopSection">
+          <img src="img/iconShop.png" alt="iconshop" />
+        </a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Hero Section Start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>
+          The kind of <br /><span>furniture</span> you have <br />been looking
+          for
+        </h1>
+        <a href="#" class="btn-left"
+          ><i data-feather="search"></i> SEARCH CATALOG</a
+        >
+        <a href="#" class="btn-right"
+          ><i data-feather="play-circle"></i> WATCH VIDEOS</a
+        >
+      </main>
+      <article class="article">
+        <div class="article-details">
+          <img src="./img/sofadecoration.png" alt="sofadecoration" />
+          <div class="details-image">
+            <img src="./img/price tag.png" alt="" />
+            <p>Pösht Sofa</p>
+            <a href="#ViewDetails">
+              <button>
+                VIEW DETAILS
+                <i class="feather-right" data-feather="chevrons-right"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="furniture">
+      <div class="furniture-upper">
+        <div class="content">
+          <h4>WHY CHOOSE US?</h4>
+          <h2>We care about details and the quality <br />of our products</h2>
+        </div>
+        <div class="content-features">
+          <div class="furniture-text">
+            <img src="./img/searchicons.png" alt="" />
+            <h3>MANUFACTURED WITH <br />QUALITY MATERIALS</h3>
+          </div>
+          <div class="furniture-text">
+            <img src="./img/icons5.png" alt="" />
+            <h3>5 YEARS OF WARRANTY <br />FOR EACH PROFUCT</h3>
+          </div>
+          <div class="furniture-text">
+            <img src="./img/kopericons.png" alt="" />
+            <h3>20 YEARS OF EXPERTISE</h3>
+          </div>
+        </div>
+      </div>
+      <div class="furniture-lower">
+        <div class="lower-text">
+            <h1>25+</h1>
+            <h3>PARTNERED BRANDS</h3>
+        </div>
+        <div class="content-lowerImg">
+            <img src="./img/gusto.png" alt="">
+            <img src="./img/stripe.png" alt="">
+            <img src="./img/treehouse.png" alt="">
+            <img src="./img/upwork.png" alt="">
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Menu Section Start -->
+    <section id="menu" class="menu">
+      <h2><span>Menu</span> Kami</h2>
+      <p>List menu yang tersedia :</p>
+
+      <div class="row">
+        <div class="menu-card">
+          <img
+            src="img/menu/kopi beans.jpg"
+            alt="coffe beans"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Biji Kopi -</h3>
+          <p class="meu-card-price">IDR 10K</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/Ground coffe beans.jpg"
+            alt="coffe beans"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Kopi bubuk -</h3>
+          <p class="meu-card-price">IDR 18K</p>
+        </div>
+      </div>
+    </section>
+    <!-- Menu Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact">
+      <h2><span>Cont</span>act</h2>
+
+      <p>
+        Untuk pemesanan bisa melalui contact dibawah, atau langsung datang ke
+        tempat kami yang ada di map
+      </p>
+
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253568.00980835984!2d111.32230414930241!3d-6.7698334524782915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e773d4d8daf8c51%3A0x3027a76e352bb10!2sRembang%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1678977485671!5m2!1sen!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="nama" />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="email" />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="nomer hp" />
+          </div>
+          <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Feather Icon -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
