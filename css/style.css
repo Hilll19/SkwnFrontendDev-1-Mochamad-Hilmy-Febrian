@@ -1,7 +1,4 @@
-:root {
-    --primary : #b6895b;
-    --bg : #f5f5f5;
-}
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
 *{
     margin: 0;
@@ -277,40 +274,167 @@ section {
 
   
 
-/* Menu Section */
-.menu {
+/* firniture set Section */
+.furniture-set {
+    display:grid;
+    min-height: 100vh;
+    background-color: white;
     padding: 1.4rem 7%;
 }
-.menu h2 {
-    margin-bottom: 1rem;
-}
-.menu p {
-    text-align: center;
-    max-width: 30rem;
-    margin: auto;
-    margin-bottom: 0.5rem;
-    font-size: 1.4rem;
-    font-weight: 100;
-    line-height: 1.6;
-}
-.menu .row {
+ 
+.options {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    justify-content: center;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    padding-top: 90px;
+    min-width: 200px;
+    max-width: 900px;
+    width: calc(100% - 100px);
+    height: 600px;
 }
-.menu .row .menu-card {
-    text-align: center;
-    padding-bottom: 3rem;
+.option {
+    position: relative;
+    overflow: hidden;
+    min-width: 60px;
+    margin: 10px;
+    background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+ 
+.option.active {
+    flex-grow: 10000;
+    transform: scale(1);
+    max-width: 600px;
+    margin: 0px;
+    border-radius: 20px;
+    background-size: auto 100%;
+}
+ 
+.option.active .shadow {
+    box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
+}
+ 
+.option:not(.active) {
+    flex-grow: 1;
+    border-radius: 30px;
+}
+ 
+.option:not(.active) .shadow {
+    bottom: -40px;
+    box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+}
+ 
+.option .shadow {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 120px;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
 
+.article-options{
+    position: absolute;
+    padding-top: 110px;
+    right: 180px;
+    align-items: center;
 }
-.menu .row .menu-card img {
-    border-radius: 50%;
-    width: 80%;
+.article-options .title p{
+    font-size: 20px;
+    color: #000000;
 }
-.menu .row .menu-card .menu-card-tittle {
-    margin-top: 1.5rem auto 0.5rem;
+.article-options .title h1{
+    padding-top: 25px;
+    font-size: 30px;
+    color: #000;
 }
+
+.maincontainer{
+  position: absolute;
+  width: 250px;
+  height: 320px;
+  background: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.thecard{
+  position: relative;
+  top: 300px;
+  left: -20px;
+  width: 150%;
+  height: 23%;
+  border-radius: 10px;
+  margin-top: 9px;
+  transform-style: preserve-3d;
+  transition: all 3s ease;
+}
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.thecard:hover{
+  transform: rotateY(180deg);
+}
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .thefront{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: white;
+  color: #000;
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #E5F0B6;
+  color: #333;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+
+/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+.thefront {
+    font-family: "Inter", sans-serif;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* Set font and padding for the back face of the flip card */
+  .theback {
+    font-family: "Inter", sans-serif;
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+
+
+
+
+
+
 
 /* Contact Section */
 .contact {
