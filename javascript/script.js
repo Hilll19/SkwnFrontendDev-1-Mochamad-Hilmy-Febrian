@@ -50,6 +50,9 @@ $(document).ready(function () {
         cardCounter++; // Increment the counter
       }
     });
+    $('#hamburger-menu').on('click', function() {
+      $('.navbar .navbar-nav').toggleClass('active'); // Toggle the active class
+    });
 
     // Initialize Feather Icons
     feather.replace();
