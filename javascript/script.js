@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // Fetch data from JSON file (replace with your actual data source)
+  // Fetch data from JSON file (data source like data.json or from API)
   $.getJSON("data.json", function (data) {
     const optionsContainer = $(".options");
     let cardCounter = 0; // Counter for limiting the number of cards
@@ -11,9 +11,7 @@ $(document).ready(function () {
 
         // Set background image of the option using the product image URL
         option.css("--optionBackground", "url(" + product.productImg + ")");
-        option.css("background-size", "cover"); // Set background size to cover
-
-        // Create other elements for the card (label, icon, etc.) if needed
+        option.css("background-size", "cover");
 
         // Append the card to the options container
         optionsContainer.append(option);
@@ -31,8 +29,10 @@ $(document).ready(function () {
     });
   });
   $.getJSON("data.json", function (data) {
-    const optionsContainer = $(".maincontainer"); // Select the container for the cards
-    let cardCounter = 0; // Counter for limiting the number of cards
+    // Select the container for the cards what you want to show data
+    const optionsContainer = $(".maincontainer");
+    // Counter for limiting the number of cards
+    let cardCounter = 0;
 
     // Loop through each product and generate flip cards
     $.each(data, function (index, product) {
@@ -51,7 +51,8 @@ $(document).ready(function () {
       }
     });
     $('#hamburger-menu').on('click', function() {
-      $('.navbar .navbar-nav').toggleClass('active'); // Toggle the active class
+      // Toggle the active class
+      $('.navbar .navbar-nav').toggleClass('active');
     });
 
     // Initialize Feather Icons
@@ -71,14 +72,13 @@ $('.container').on('click', function () {
 (function($) {
     var slide = function(ele,options) {
         var $ele = $(ele);
-        // 默认设置选项
+
         var setting = {
             speed: 1000,
             interval: 2000,
             
         };
         $.extend(true, setting, options);
-        // 规定好每张图片处于的位置和状态
         var states = [
             { $zIndex: 1, width: 120, height: 150, top: 69, left: 134, $opacity: 0.2 },
             { $zIndex: 2, width: 130, height: 170, top: 59, left: 0, $opacity: 0.4 },
@@ -92,7 +92,6 @@ $('.container').on('click', function () {
         var $lis = $ele.find('li');
         var timer = null;
 
-        // 事件
         $ele.find('.hi-next').on('click', function() {
             next();
         });
